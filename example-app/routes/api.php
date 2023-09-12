@@ -24,7 +24,7 @@ Route::group(['as' => 'products.', 'prefix' => 'products', 'middleware' => ['COR
     Route::get('/', [ProductsController::class, 'index'])->name('index');
     Route::get('/{id}', [ProductsController::class, 'show'])->name('show');
     Route::delete('/{id}', [ProductsController::class, 'delete'])->name('delete');
-    Route::post('/{id}', [ProductsController::class, 'store'])->name('store');
+    Route::post('/', [ProductsController::class, 'store'])->name('store');
     Route::put('/{id}', [ProductsController::class, 'update'])->name('update');
 });
 
